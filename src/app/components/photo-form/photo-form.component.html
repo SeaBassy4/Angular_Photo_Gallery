@@ -12,7 +12,7 @@
 
   <div class="form-group">
     <label for="title">Title</label>
-    <input id="title" type="text" formControlName="title" placeholder="A beautiful sunset..."
+    <input id="title" type="text" formControlName="title" placeholder="add a title to your image..."
            [class.invalid]="photoForm.get('title')?.invalid && photoForm.get('title')?.touched">
     <div class="error-msg" *ngIf="photoForm.get('title')?.invalid && photoForm.get('title')?.touched">
       Title must be at least 3 characters.
