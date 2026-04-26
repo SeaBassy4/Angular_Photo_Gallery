@@ -1,0 +1,21 @@
+<div class="app-container">
+  <header class="app-header glass-panel">
+    <div class="header-content">
+      <h1>{{ title }}</h1>
+      <div class="stats-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none" class="heart-icon-header"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        <span class="stats-text">Total Likes: <strong>{{ totalLikes() }}</strong></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <app-photo-form></app-photo-form>
+    <div class="gallery-section">
+      <div class="section-header">
+        <h2>Your Collection</h2>
+      </div>
+      <app-gallery-grid></app-gallery-grid>
+    </div>
+  </main>
+</div>

@@ -1,0 +1,18 @@
+<div class="gallery-container">
+  <div class="gallery-grid" *ngIf="photos().length > 0; else emptyState">
+    <app-photo-card 
+      *ngFor="let photo of photos()" 
+      [photo]="photo"
+      (like)="onLike($event)"
+      (delete)="onDelete($event)">
+    </app-photo-card>
+  </div>
+  
+  <ng-template #emptyState>
+    <div class="empty-state">
+      <div class="empty-icon">📸</div>
+      <h3>No photos yet</h3>
+      <p>Add your first photo using the form above to start your gallery.</p>
+    </div>
+  </ng-template>
+</div>
